@@ -1,0 +1,1007 @@
+<canvas width="510" height="730"></canvas>
+
+<script>
+
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	function fondo(color1,color2,color3){
+		
+		pincel.fillStyle = color1;
+		pincel.fillRect(0,0,900,730)
+
+		pincel.fillStyle = color2;
+		pincel.beginPath();
+		pincel.moveTo(0,0);
+		pincel.lineTo(0,710);
+		pincel.lineTo(490,0);
+		pincel.fill();
+
+		pincel.fillStyle = color3;
+		pincel.beginPath();
+		pincel.moveTo(510,20);
+		pincel.lineTo(510,730);
+		pincel.lineTo(20,730);
+		pincel.fill();
+	}
+
+//fondo negro
+	function negro(x,y,ancho,alto){
+		pincel.fillStyle = "black";
+		pincel.fillRect(x,y,ancho,alto);
+
+
+	}
+
+//ojo
+	function cornea(x,y,ancho,alto){
+		pincel.fillStyle = "#b4c6e6";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+	function cornea2(x,y,ancho,alto){
+		pincel.fillStyle = "#fbdaab";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+//piel
+	function piel1(x,y,ancho,alto){
+		pincel.fillStyle = "#d58f29";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+	function piel2(x,y,ancho,alto){
+		pincel.fillStyle = "#fed967";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+	function piel3(x,y,ancho,alto){
+		pincel.fillStyle = "#9e4a23";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+	function piel4(x,y,ancho,alto){
+		pincel.fillStyle = "#6a0c0d";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+	function cicatriz(x,y,ancho,alto){
+		pincel.fillStyle = "#8d181b";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+//camisa
+
+	//sirve para el color de la camisa y la cinta del sombrero
+	function rojo1(x,y,ancho,alto){
+		pincel.fillStyle = "#cb1c6a";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+	function rojo2(x,y,ancho,alto){
+		pincel.fillStyle = "#8d181b";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+	
+	function rojo3(x,y,ancho,alto){
+		pincel.fillStyle = "#421211";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+	function sombra(x,y,ancho,alto){
+		pincel.fillStyle = "#421211";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+//botones camisa
+	//boton oscuro
+	function botonOscuro(x,y,ancho,alto){
+		pincel.fillStyle = "#c29a37";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+	//botones claros
+	function botonesClaros(x,y,ancho,alto){
+		pincel.fillStyle = "#fde385";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+//sombrero
+
+	function cafe2(x,y,ancho,alto){
+		pincel.fillStyle = "#c29a37";
+		pincel.fillRect(x,y,ancho,alto);
+		}
+
+	function cafe3(x,y,ancho,alto){
+		pincel.fillStyle = "#fad166";
+		pincel.fillRect(x,y,ancho,alto);
+		}
+
+	//sirve para parte oscura de sombrero y cinturon
+	function cafeOscuro(x,y,ancho,alto){
+		pincel.fillStyle = "#806226";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+//cinta Sombrero
+	//parte oscura
+	function cintaOscura(x,y,ancho,alto){
+		pincel.fillStyle = "#6a0c0d";
+		pincel.fillRect(x,y,ancho,alto);
+
+	}
+
+//pantaloneta
+  //del mas oscuro al mas claro
+	function azul1(x,y,ancho,alto){
+		pincel.fillStyle = "#232c69";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+	function azul2(x,y,ancho,alto){
+		pincel.fillStyle = "#3e5ba9";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+	function azul3(x,y,ancho,alto){
+		pincel.fillStyle = "#5c67af";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+	function pelusa1(x,y,ancho,alto){//amarillo hueso
+		pincel.fillStyle = "#fff5ce";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+	function pelusa2(x,y,ancho,alto){
+		pincel.fillStyle = "#c0bfbf";
+		pincel.fillRect(x,y,ancho,alto);
+	}
+
+
+//COLOREADO FUNCIONES
+//contorno ordenado el largo de y
+
+//fondo negro
+ 	function colorNegro(){
+	 	//x=50
+	 	negro(50,660,10,20);
+
+		//X=60
+		negro(60,650,10,30);
+
+		//X=70
+		negro(70,640,10,40);
+		
+		//X=80
+		negro(80,420,10,30);
+		negro(80,640,10,40);
+		
+		//X=90
+		negro(90,400,10,60);
+		negro(90,630,10,50);
+
+		//X=100
+		negro(100,340,10,20);
+		negro(100,380,10,90);
+		negro(100,620,10,60);
+
+		//X=110
+		negro(110,330,10,140);
+		negro(110,590,10,90);
+
+		//X=120
+		negro(120,320,10,140);
+		negro(120,510,10,20);
+		negro(120,560,10,120);
+
+		//X=130
+		negro(130,310,10,90);
+		negro(130,420,10,40);
+		negro(130,500,10,180);
+
+		//X=140
+		negro(140,300,10,90);
+		negro(140,430,10,20);
+		negro(140,490,10,140);
+		negro(140,660,10,10);
+
+		//X=150
+		negro(150,280,10,110);
+		negro(150,470,10,130);
+
+		//X=160
+		negro(160,180,10,30);	
+		negro(160,260,10,90);
+		negro(160,390,10,20);
+		negro(160,450,10,140);
+
+		//X=170
+		negro(170,160,10,50);
+		negro(170,240,10,80);
+		negro(170,370,10,50);
+		negro(170,430,10,130);
+
+		//X=180
+		negro(180,90,10,120);	
+		negro(180,230,10,70);
+		negro(180,350,10,210);
+
+		//X=190
+		negro(190,70,10,140);	
+		negro(190,230,10,60);
+		negro(190,320,10,230);
+
+		//X=200
+		negro(200,60,10,150);	
+		negro(200,220,10,300);
+
+		//X=210	
+		negro(210,60,10,140);	
+		negro(210,220,10,280);
+
+		//X=220
+		negro(220,50,10,160);	
+		negro(220,220,10,260);
+
+		//X=230
+		negro(230,50,10,420);	
+
+		//X=240, 250, 260
+		negro(240,50,30,410);	
+
+		//X=270	
+		negro(270,50,10,420);	
+
+		//X=280
+		negro(280,60,10,420);
+
+		//X=290
+		negro(290,70,10,140);	
+		negro(290,220,10,280);
+
+		//X=300
+		negro(300,80,10,120);	
+		negro(300,220,10,300);
+
+		//X=310
+		negro(310,80,10,100);	
+		negro(310,230,10,50);
+		negro(310,320,10,230);
+
+		//X=320
+		negro(320,80,10,110);	
+		negro(320,240,10,50);
+		negro(320,340,10,220);
+
+
+		//X=330
+		negro(330,80,10,80);	
+		negro(330,240,10,60);
+		negro(330,360,10,50);	
+		negro(330,420,10,140);
+
+		//X=340
+		negro(340,80,10,90);	
+		negro(340,250,10,60);
+		negro(340,380,10,20);	
+		negro(340,430,10,150);
+
+		//X=350
+		negro(350,80,10,70);	
+		negro(350,170,10,10);
+		negro(350,260,10,60);	
+		negro(350,440,10,150);
+
+		//X=360
+		negro(360,80,10,60);	
+		negro(360,250,10,70);	
+		negro(360,450,10,160);	
+		negro(360,660,10,10);
+
+		//X=370
+		negro(370,90,10,20);	
+		negro(370,250,10,70);	
+		negro(370,490,10,190);
+		
+		//X=380
+		negro(380,190,10,20);	
+		negro(380,250,10,70);	
+		negro(380,500,10,20);	
+		negro(380,550,10,130);
+
+		//X=390
+		negro(390,180,10,40);	
+		negro(390,240,10,70);
+		negro(390,580,10,100);
+
+		//X=400
+		negro(400,180,10,100);	
+		negro(400,610,10,70);
+
+		//X=410
+		negro(410,170,10,100);	
+		negro(410,630,10,50);
+
+		//X=420
+		negro(420,170,10,90);	
+		negro(420,640,10,40);
+
+		//X=430
+		negro(430,180,10,70);	
+		negro(430,640,10,40);
+
+		//X=440	
+		negro(440,190,10,50);	
+		negro(440,650,10,30);
+
+		//X=450
+		negro(450,200,10,30);
+	}
+
+//ojo
+	function colorCornea(){
+		cornea(260,160,10,10);
+	}
+	
+	function colorCornea2(){
+		cornea2(260,170,10,10);
+	}
+
+//piel
+	function colorPiel1(){
+		//pierna izquierda pantalla
+		piel1(60,660,10,10);
+		piel1(70,650,10,10);
+		piel1(90,650,10,10);
+		piel1(100,660,10,10);
+		piel1(110,640,10,20);
+		piel1(120,600,10,10);
+		piel1(120,620,10,20);
+		piel1(130,570,10,10);
+		piel1(130,610,10,10);
+		piel1(140,550,10,10);
+		piel1(140,580,10,10);
+		piel1(150,560,10,20);
+
+		//brazo izquierdo pantalla
+		piel1(90,420,10,10);
+		piel1(90,440,10,10);
+		piel1(100,400,10,10);
+		piel1(110,390,10,10);
+		piel1(110,420,10,10);
+		piel1(110,450,10,10);
+		piel1(120,370,10,20);
+		piel1(120,420,10,20);
+
+		//brazo derecho pantalla
+		piel1(380,260,10,20);
+		piel1(390,200,10,10);
+		piel1(390,250,10,20);
+		piel1(400,250,10,10);
+		piel1(410,220,10,10);
+		piel1(410,240,10,10);
+		piel1(420,180,10,10);
+		piel1(420,200,10,10);
+		piel1(420,220,10,20);
+		piel1(430,210,10,10);
+
+
+		//pierna derecha pantalla
+		piel1(350,560,10,10);
+		piel1(360,550,10,10);
+		piel1(360,570,10,10);
+		piel1(370,560,10,10);
+		piel1(370,590,10,10);
+		piel1(380,590,10,30);
+		piel1(380,630,10,10);
+		piel1(390,620,10,10);
+		piel1(390,650,10,10);
+		piel1(400,660,10,10);
+		piel1(420,650,10,20);
+
+		//cara
+		piel1(220,180,10,10);
+		piel1(240,160,10,10);
+		piel1(240,190,10,10);
+		piel1(250,170,10,10);
+		piel1(250,200,10,10);
+		piel1(260,180,10,10);
+		piel1(260,210,10,10);
+		piel1(270,140,10,10);
+		piel1(270,180,10,10);
+		piel1(270,210,10,10);
+		piel1(280,150,10,10);
+		piel1(280,170,10,10);
+		piel1(280,200,10,10);
+		piel1(290,170,10,20);
+		piel1(300,150,10,20);
+
+	
+		//pecho
+		piel1(230,250,10,10);
+		piel1(230,280,10,20);
+		piel1(230,320,10,30);
+		piel1(240,220,10,20);
+		piel1(240,260,10,10);
+		piel1(240,310,10,10);
+		piel1(240,340,10,10);
+		piel1(250,230,10,20);
+		piel1(250,270,10,10);
+		piel1(250,300,10,10);
+		piel1(250,330,10,20);
+		piel1(260,240,10,10);
+		piel1(260,260,10,10);
+		piel1(260,210,10,10);
+		piel1(260,310,10,20);
+		piel1(260,340,10,10);
+		piel1(270,280,10,20);
+		piel1(270,320,10,20);
+	}
+
+	function colorPiel2(){
+		//pierna izquierda pantalla
+		piel2(80,660,20,10);
+		piel2(100,640,10,10);
+		piel2(110,630,10,10);
+		piel2(120,610,10,10);
+		piel2(130,580,10,30);
+		piel2(140,560,10,20);
+
+		//brazo izquierdo pantalla
+		piel2(90,430,10,10);
+		piel2(100,410,10,40);
+		piel2(110,400,10,20);
+		piel2(130,430,10,20);
+
+		//brazo derecho pantalla
+		piel2(390,190,20,10);
+		piel2(410,180,10,10);
+		piel2(430,190,10,10);
+		piel2(440,200,10,10);
+
+		//pierna derecha pantalla
+		piel2(360,560,10,10);
+		piel2(370,570,10,20);
+		piel2(380,620,10,10);
+		piel2(390,630,10,10);
+		piel2(390,660,10,10);
+
+		//cara
+		piel2(220,170,10,10);
+		piel2(240,170,10,20);
+		piel2(250,180,10,20);
+		piel2(260,190,20,10);
+		piel2(280,180,10,20);
+		piel2(290,190,10,10);
+	
+		//pecho
+		piel2(230,230,10,20);
+		piel2(240,240,10,20);
+		piel2(240,320,10,20);
+		piel2(250,250,10,20);
+		piel2(250,310,10,20);
+		piel2(260,250,20,10);
+		piel2(260,330,10,10);
+
+		
+	}
+
+	function colorPiel3(){
+		//pierna izquierda pantalla
+		piel3(100,630,10,10);
+		piel3(110,620,10,10);
+		piel3(120,590,10,10);
+		piel3(120,640,10,30);
+		piel3(130,560,10,10);
+		piel3(130,620,10,10);
+		piel3(140,540,10,10);
+		piel3(150,550,20,10);
+
+
+		//brazo izquierdo pantalla
+		piel3(100,450,10,10);
+		piel3(110,380,10,10);
+		piel3(110,430,10,10);
+		piel3(120,390,10,10);
+		piel3(120,440,10,10);
+		piel3(130,380,10,10);
+
+		//brazo derecho pantalla
+		piel3(370,270,10,20);
+		piel3(380,280,10,10);
+		piel3(390,270,10,10);
+		piel3(400,210,20,10);
+		piel3(400,240,10,10);
+		piel3(400,260,10,10);
+		piel3(410,230,10,10);
+		piel3(410,250,10,10);		
+		piel3(420,190,10,10);
+		piel3(420,240,10,10);
+		piel3(430,200,10,10);
+		piel3(430,230,10,10);		
+		piel3(440,210,10,20);
+
+		//pierna derecha pantalla
+		piel3(350,540,10,20);
+		piel3(350,570,10,10);
+		piel3(360,540,10,10);
+		piel3(360,580,10,10);
+		piel3(370,550,10,10);
+		piel3(370,600,10,10);
+		piel3(380,580,10,10);
+		piel3(380,640,10,10);
+		piel3(380,660,10,10);
+		piel3(390,610,10,10);
+		piel3(400,630,10,10);
+		piel3(400,650,10,10);
+		piel3(410,640,10,10);
+		piel3(430,650,10,20);
+		
+		//cara
+		piel3(230,180,10,10);
+		piel3(240,150,10,10);
+		piel3(270,130,10,10);
+		piel3(270,150,10,10);
+		piel3(280,160,10,10);
+		piel3(300,140,10,10);
+		piel3(300,170,10,10);
+
+	
+		//pecho
+		piel3(230,220,10,10);
+		piel3(230,260,10,20);
+		piel3(230,310,10,10);
+		piel3(240,210,10,10);
+		piel3(240,270,10,20);
+		piel3(240,300,10,10);
+		piel3(250,220,10,10);
+		piel3(260,270,10,20);
+		piel3(260,300,10,10);
+		piel3(270,230,10,20);
+		piel3(270,260,10,20);
+		piel3(270,310,10,10);
+		piel3(280,340,10,10);
+
+		
+	}
+
+	function colorPiel4(){
+		//pierna izquierda pantalla
+		piel4(140,530,10,10);
+		piel4(150,540,20,10);
+
+		//pierna derecha pantalla
+		piel4(340,540,10,20);
+		piel4(360,530,10,10);
+	}
+
+	function colorCicatriz(){
+		//pierna izquierda pantalla
+		cicatriz(230,300,10,10);
+		cicatriz(240,290,10,10);
+		cicatriz(250,280,10,20);
+		cicatriz(260,290,10,10);
+		cicatriz(270,300,10,10);
+	}
+
+//camisa
+	function colorRojoCamisa1 (){
+		rojo1(110,350,10,10);
+		rojo1(120,340,10,10);
+		rojo1(130,330,10,10);	
+		rojo1(130,350,10,20);
+		rojo1(140,320,10,10);	
+		rojo1(140,340,10,10);
+		rojo1(150,300,10,20);
+		rojo1(170,270,10,20);	
+		rojo1(180,240,10,20);
+		rojo1(190,360,10,20);	
+		rojo1(200,240,10,20);
+		rojo1(210,250,10,20);
+		rojo1(210,350,10,10);
+		rojo1(280,250,10,70);
+		rojo1(290,260,10,10);
+		rojo1(290,320,10,30);	
+		rojo1(300,230,10,20);
+		rojo1(300,350,10,20);
+		rojo1(310,250,10,20);	
+		rojo1(310,340,10,10);
+		rojo1(330,270,10,10);	
+		rojo1(350,270,10,20);
+		rojo1(350,300,10,10);
+		rojo1(360,260,10,10);	
+		rojo1(370,300,10,10);
+
+	}
+
+	function colorRojoCamisa2 (){
+		rojo2(110,340,10,10);
+		rojo2(120,330,10,10);
+		rojo2(120,350,10,10);	
+		rojo2(130,320,10,10);
+		rojo2(130,340,10,10);	
+		rojo2(140,310,10,10);
+		rojo2(140,330,10,10);
+		rojo2(140,350,10,20);	
+		rojo2(150,320,10,30);
+		rojo2(160,290,10,30);	
+		rojo2(170,260,10,10);
+		rojo2(180,260,10,20);
+		rojo2(180,370,10,30);
+		rojo2(190,240,10,20);	
+		rojo2(190,350,10,10);
+		rojo2(190,380,10,10);
+		rojo2(200,260,10,20);	
+		rojo2(200,330,10,30);
+		rojo2(210,230,10,20);
+		rojo2(210,280,10,10);	
+		rojo2(210,300,10,10);
+		rojo2(210,320,10,10);	
+		rojo2(210,340,10,10);
+		rojo2(210,360,10,20);
+		rojo2(220,250,10,80);	
+		rojo2(280,320,10,10);
+		rojo2(290,230,10,30);
+		rojo2(290,270,10,10);
+		rojo2(290,300,10,20);	
+		rojo2(300,250,10,10);
+		rojo2(300,320,10,30);	
+		rojo2(300,370,10,10);
+		rojo2(310,350,10,10);
+		rojo2(320,250,10,30);	
+		rojo2(320,360,10,20);
+		rojo2(330,250,10,20);	
+		rojo2(340,260,10,10);
+		rojo2(340,290,30,10);
+		rojo2(360,270,10,10);	
+		rojo2(360,300,10,10);
+		rojo2(380,300,10,10);
+	}
+
+	function colorRojoCamisa3 (){
+		rojo3(120,360,10,10);
+		rojo3(130,370,20,10);
+		rojo3(160,280,10,10);	
+		rojo3(170,390,10,20);
+		rojo3(180,280,10,10);	
+		rojo3(190,260,10,10);
+		rojo3(200,230,10,10);
+		rojo3(200,280,10,10);	
+		rojo3(200,320,10,10);
+		rojo3(200,360,10,20);	
+		rojo3(220,330,10,20);
+		rojo3(280,330,10,30);
+		rojo3(290,280,10,20);
+		rojo3(290,350,10,20);	
+		rojo3(310,240,10,10);
+		rojo3(310,360,10,20);
+		rojo3(330,280,10,10);
+		rojo3(360,280,10,10);
+		rojo3(370,260,10,10);
+		rojo3(370,290,10,10);
+	}
+
+//botones camisa
+	//boton oscuro
+		function colorBotonOscuro (){
+			botonOscuro(210,310,10,10);
+		}
+	//botones claros
+		function colorBotonesClaros (){
+			botonesClaros(210,270,10,10);
+			botonesClaros(210,290,10,10);
+			botonesClaros(210,330,10,10);
+		}
+
+//sombrero
+
+	function colorCafeSombrero2(){
+		cafe2(170,180,10,20);
+		cafe2(180,170,10,10);
+		cafe2(190,100,10,20);
+		cafe2(190,160,10,10);
+		cafe2(200,80,10,10);
+		cafe2(200,100,10,10);
+		cafe2(210,70,10,10);
+		cafe2(210,90,10,10);
+		cafe2(210,140,10,10);
+		cafe2(220,80,10,10);
+		cafe2(220,130,10,10);
+		cafe2(230,60,10,10);
+		cafe2(230,110,10,10);
+		cafe2(240,120,10,10);
+		cafe2(250,100,10,10);
+		cafe2(260,60,10,10);
+		cafe2(260,110,10,10);
+		cafe2(280,70,10,10);
+		cafe2(280,90,10,10);
+		cafe2(300,100,10,10);
+		cafe2(360,90,10,10);
+	}
+
+	function colorCafeSombrero3 (){
+		cafe3(180,160,10,10);
+		cafe3(190,150,10,10);
+		cafe3(200,90,10,10);
+		cafe3(200,140,10,10);
+		cafe3(210,80,10,10);
+		cafe3(210,130,10,10);
+		cafe3(220,70,10,10);
+		cafe3(220,90,10,10);
+		cafe3(220,120,10,10);
+		cafe3(230,70,10,20);
+		cafe3(230,120,10,10);
+		cafe3(240,60,20,30)
+		cafe3(240,110,20,10);
+		cafe3(260,70,20,10);
+		cafe3(260,100,30,10);
+		cafe3(290,90,70,10);
+		cafe3(360,100,10,10);
+
+	}
+
+	function colorCafeOscuroSombrero (){
+		cafeOscuro(180,180,10,20);
+		cafeOscuro(190,90,10,10);
+		cafeOscuro(190,170,10,30);
+		cafeOscuro(200,70,10,10);
+		cafeOscuro(200,150,10,10);
+		cafeOscuro(200,170,10,10);
+		cafeOscuro(200,190,10,10);
+		cafeOscuro(220,60,10,10);
+		cafeOscuro(270,110,10,10);
+		cafeOscuro(300,100,50,10);
+		cafeOscuro(320,120,30,10);
+		cafeOscuro(340,130,10,10);
+		cafeOscuro(350,100,10,30);
+	}
+
+//cinta sombrero
+	//parte oscura	
+	function colorCintaOscura (){
+		cintaOscura(190,120,10,20);
+		cintaOscura(200,110,10,30);
+		cintaOscura(210,120,10,10);
+		cintaOscura(290,80,10,10);
+
+	}
+
+	//parte clara
+	function colorRojo1Cinta (){
+		rojo1(210,100,20,20);
+		rojo1(230,90,20,20);
+		rojo1(250,90,10,10);	
+		rojo1(260,80,20,20);
+		rojo1(280,80,10,10);	
+	}
+
+//cinturon
+		function colorCafeOscuroCinturon (){
+			cafeOscuro(210,380,10,10);
+			cafeOscuro(220,360,10,20);
+			cafeOscuro(230,350,40,10);
+			cafeOscuro(230,370,40,10);
+			cafeOscuro(270,360,10,10);
+			cafeOscuro(280,360,10,40);
+			cafeOscuro(290,400,10,20);
+			cafeOscuro(300,420,10,20);
+			cafeOscuro(310,410,10,10);
+			cafeOscuro(310,440,10,10);
+			cafeOscuro(320,420,10,20);
+			cafeOscuro(330,440,10,20);
+			cafeOscuro(350,470,10,10);
+		}
+
+		function colorCafeCinturon2(){
+			cafe2(230,360,10,10);
+			cafe2(240,380,10,10);
+			cafe2(260,360,10,10);
+			cafe2(270,370,10,10);
+			cafe2(300,390,10,10);
+			cafe2(330,430,10,10);
+			cafe2(340,450,10,10);
+			cafe2(350,460,10,10);
+		}
+
+		function colorCafeCinturon3(){
+			cafe3(220,380,20,10);
+			cafe3(240,360,20,10);
+			cafe3(290,380,10,10);
+			cafe3(300,400,10,20);
+			cafe3(310,420,10,20);
+			cafe3(320,440,10,10);
+			cafe3(340,440,10,20);
+			cafe3(350,450,10,10);
+		}
+
+//pantaloneta
+
+		function colorAzul1 (){
+			azul1(140,500,10,10);
+			azul1(150,490,10,10);
+			azul1(160,480,20,10);
+			azul1(170,450,10,10);
+			azul1(180,430,10,10);
+			azul1(180,510,10,20);
+			azul1(190,400,40,10);
+			azul1(190,470,10,10);
+			azul1(190,500,10,20);
+			azul1(200,460,10,10);
+			azul1(200,480,10,20);
+			azul1(210,430,30,10);
+			azul1(210,460,10,20);
+			azul1(220,450,10,20);
+			azul1(240,390,40,10);
+			azul1(240,440,30,10);
+			azul1(250,410,30,10);
+			azul1(270,450,20,10);			
+			azul1(280,400,10,30);
+			azul1(280,460,30,10);
+			azul1(290,420,10,10);
+			azul1(290,440,20,10);			
+			azul1(290,470,10,10);
+			azul1(300,490,10,10);			
+			azul1(310,470,10,10);
+			azul1(310,510,30,10);			
+			azul1(320,500,10,10);
+			azul1(320,530,10,10);			
+			azul1(330,480,20,10);
+			azul1(350,490,20,10);
+			azul1(370,500,10,10);
+		}
+
+		function colorAzul2(){
+			azul2(150,500,10,10);
+			azul2(160,470,20,10);
+			azul2(160,490,20,10);
+			azul2(160,520,20,10);
+			azul2(170,510,10,10);
+			azul2(180,440,10,20);
+			azul2(180,480,10,10);
+			azul2(180,500,10,10);
+			azul2(190,410,10,10);
+			azul2(190,440,10,10);
+			azul2(190,460,10,10);
+			azul2(190,490,10,10);
+			azul2(200,420,10,20);
+			azul2(200,450,20,10);
+			azul2(200,470,10,10);
+			azul2(220,420,20,10);
+			azul2(220,440,20,10);
+			azul2(230,400,10,10);
+			azul2(240,410,10,10);
+			azul2(240,430,30,10);
+			azul2(270,400,10,10);
+			azul2(270,420,10,10);
+			azul2(270,440,20,10);
+			azul2(290,450,40,10);
+			azul2(300,470,10,20);
+			azul2(310,490,10,20);
+			azul2(320,470,10,20);
+			azul2(320,520,10,10);
+			azul2(330,460,20,10);
+			azul2(330,500,10,10);
+			azul2(340,490,10,10);
+			azul2(340,520,10,10);
+			azul2(350,480,10,10);
+			azul2(360,500,10,10);
+		}
+
+		function colorAzul3(){
+			azul3(150,510,20,10);
+			azul3(160,500,20,10);
+			azul3(170,460,20,10);
+			azul3(180,470,10,10);
+			azul3(180,490,10,10);
+			azul3(190,430,10,10);
+			azul3(190,450,10,10);
+			azul3(190,480,10,10);
+			azul3(200,410,40,10);
+			azul3(200,440,20,10);
+			azul3(210,420,10,10);
+			azul3(240,400,30,10);
+			azul3(240,420,30,10);
+			azul3(270,430,30,10);
+			azul3(310,460,20,10);
+			azul3(310,480,10,10);
+			azul3(320,490,20,10);
+			azul3(330,470,20,10);
+			azul3(330,520,10,10);
+			azul3(340,500,20,10);
+			azul3(340,510,30,10);
+
+		}
+
+		function colorPelusa1(){
+		//izquierda pantalla
+			pelusa1(130,510,10,10);
+			pelusa1(140,520,20,10);
+			pelusa1(160,530,20,10);
+			pelusa1(180,540,10,10);
+
+		//derecha pantalla
+			pelusa1(340,530,10,10);
+			pelusa1(330,540,10,10);
+			pelusa1(350,520,20,10);
+
+		}
+
+		function colorPelusa2 (){
+		//izquierda pantalla
+			pelusa2(130,520,10,10);
+			pelusa2(140,510,10,10);
+			pelusa2(150,530,10,10);
+			pelusa2(170,540,10,10);
+			pelusa2(180,530,10,10);
+
+		//derecha pantalla
+			pelusa2(320,540,10,10);
+			pelusa2(330,530,10,10);
+			pelusa2(350,530,10,10);
+			pelusa2(370,510,10,10);
+		}
+
+//background
+fondo("white","orange","darkBlue")
+
+//COLOREADO EJECUTADO
+
+//fondo negro
+	colorNegro();
+
+//cornea
+	colorCornea();
+	colorCornea2();
+
+//piel
+	colorPiel1();
+	colorPiel2();
+	colorPiel3();
+	colorPiel4();
+	colorCicatriz();
+
+//sombrero
+	//cinta 
+		//cinta parte oscura
+		colorCintaOscura();
+		//cinta parte clara
+		colorRojo1Cinta();
+
+//camisa
+	colorRojoCamisa1();
+	colorRojoCamisa2();
+	colorRojoCamisa3();
+
+	//botones
+	colorBotonOscuro();
+	colorBotonesClaros();
+
+//sombrero
+	colorCafeOscuroSombrero();
+	colorCafeSombrero2();
+	colorCafeSombrero3();
+
+//cinturon
+
+	colorCafeOscuroCinturon();
+	colorCafeCinturon2();
+	colorCafeCinturon3();
+
+//pantaloneta
+	colorAzul1();
+	colorAzul2();
+	colorAzul3();
+	colorPelusa1();
+	colorPelusa2();
+
+</script>
